@@ -341,6 +341,7 @@ body {
   -webkit-border-radius:30px;
   -moz-border-radius:30px;
   color:#ffffff;
+  text-decoration: none;
 }
 .button_top:hover {
   background: linear-gradient(270deg, #9703fb, #03a1fb, #f000b2);

@@ -5,7 +5,7 @@ import { Checkbox } from '../components/auth/Checkbox';
 
 const Register: NextPage = () => (
   <AuthLayout
-    type="login"
+    type="register"
     formDesc="Join us and enjoy the moment."
     title="WELCOME!"
     desc="REGISTER AND ENJOY OUR BENEFITS!"
