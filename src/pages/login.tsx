@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AuthLayout } from '../layouts/AuthLayout/AuthLayout';
 import { Input } from '../components/auth/Input';
@@ -20,7 +20,7 @@ const Login: NextPage = () => {
     resolver: yupResolver(loginScheme),
   });
 
-  const onSubmit = (data: FormTypes) => console.log(data);
+  const onSubmit: SubmitHandler<FormTypes> = data => console.log(data);
 
   return (
     <>

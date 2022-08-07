@@ -1,17 +1,23 @@
 import { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AuthLayout } from '../layouts/AuthLayout/AuthLayout';
 import { Input } from '../components/auth/Input';
-import { Checkbox } from '../components/auth/Checkbox';
+import { Radio } from '../components/auth/Radio';
 import { registerScheme } from '../validation/auth';
+
+const genders = [
+  { label: 'Male', value: 'male' },
+  { label: 'Female', value: 'female' },
+];
 
 interface FormTypes {
   username: string;
   email: string;
   fullname: string;
   password: string;
+  gender: 'male' | 'female';
 }
 
 const Register: NextPage = () => {
@@ -23,7 +29,7 @@ const Register: NextPage = () => {
     resolver: yupResolver(registerScheme),
   });
 
-  const onSubmit = (data: FormTypes) => console.log(data);
+  const onSubmit: SubmitHandler<FormTypes> = data => console.log(data);
 
   return (
     <>
@@ -65,8 +71,15 @@ const Register: NextPage = () => {
             error={errors.password}
           />
           <div className="register_form_item">
-            <Checkbox name="gender" title="Male" />
-            <Checkbox name="gender" title="Female" />
+            {genders.map(i => (
+              <Radio
+                key={i.value}
+                name="gender"
+                title={i.label}
+                control={control}
+                value={i.value}
+              />
+            ))}
           </div>
           <div className="register_form_item">
             <button type="submit" className="button">
