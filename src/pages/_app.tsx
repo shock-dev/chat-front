@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import '../styles/index.css';
-import '../styles/animate.css';
+import 'animate.css';
 
 const App = ({ Component, pageProps }: AppProps) => (
   <Component {...pageProps} />
