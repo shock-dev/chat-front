@@ -12,7 +12,7 @@ interface FormTypes {
 
 const schema = yup
   .object({
-    username: yup.string().required(),
+    username: yup.string().required('Username is a required field'),
     password: yup
       .string()
       .required('No password provided.')
@@ -30,7 +30,7 @@ const Login: NextPage = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = () => console.log(errors);
+  const onSubmit = (data: FormTypes) => console.log(data);
 
   return (
     <AuthLayout
