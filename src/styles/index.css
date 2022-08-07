@@ -1,11 +1,9 @@
-@charset "UTF-8";
-/* CSS Document */
 html,
 body {
   width: 100%;
   height: 100%;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont,
   "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans",
@@ -13,7 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -ms-text-size-adjust: 100%;
-  -webkit-texts-size-adjust: 100%;
   -webkit-backface-visibility: hidden;
 }
 
@@ -21,11 +18,11 @@ body {
   height: 100%;
 }
 
-@font-face { font-family: HammersmithOne; src: url('../public/fonts/HammersmithOne.woff2');}
+@font-face { font-family: HammersmithOne, sans-serif; src: url('../public/fonts/HammersmithOne.woff2');}
 @font-face {font-family: PaytoneOne; src: url('../public/fonts/PaytoneOne.woff2');}
-*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;position:relative;}
+*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;position:relative;}
 .background_color{background-color: #dfdfdf; background-image: linear-gradient(to bottom, #dddbd1, #d2dbdc);}
-.border-radius{border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;}
+.border-radius{border-radius:3px;-webkit-border-radius:3px;}
 .border{border:1px solid #d8dbdf;}
 .text_color{color:#292929;}
 .style {
@@ -46,7 +43,6 @@ body {
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0;
   position: relative;
@@ -57,28 +53,21 @@ body {
   overflow: hidden;
 }
 .page_container {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
   -webkit-box-ordinal-group: 5;
-  -webkit-order: 4;
   -ms-flex-order: 4;
   order: 4;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   padding: 0;
 }
 
 .column_container {
-  -o-flex: 2;
   -ms-flex: 2;
   -webkit-flex: 2;
-  -ms-flex: 2;
   flex: 2;
   min-width: 450px;
   -webkit-flex-direction: column;
@@ -92,8 +81,8 @@ body {
   position:absolute;
   width:100%;
   height:100%;
-  top:0px;
-  left:0px;
+  top:0;
+  left:0;
   z-index:-1;
   background: linear-gradient(270deg, #9703fb, #03a1fb, #f000b2);
   background-size: 600% 600%;
@@ -107,8 +96,8 @@ body {
   position:absolute;
   width:100%;
   height:100%;
-  top:0px;
-  left:0px;
+  top:0;
+  left:0;
   z-index:-1;
   background: linear-gradient(107deg, #fb0303, #038cfb, #f000b2);
   background-size: 600% 600%;
@@ -123,7 +112,7 @@ body {
   color:#ffffff;
   font-weight:600;
   font-size:110px;
-  font-family: HammersmithOne;
+  font-family: HammersmithOne, sans-serif;
 }
 
 .wellcome_note {
@@ -131,17 +120,17 @@ body {
   color:#ffffff;
   font-weight:500;
   font-size:70px;
-  font-family: HammersmithOne;
+  font-family: HammersmithOne, sans-serif;
   max-width:500px;
   line-height:4rem;
 }
 .wellcome_footer {
   position:absolute;
   width:100%;
-  bottom:0px;
+  bottom:0;
   color:#ffffff;
   font-size:15px;
-  font-family: HammersmithOne;
+  font-family: HammersmithOne, sans-serif;
   font-weight:300;
   padding-bottom:50px;
 }
@@ -151,13 +140,13 @@ body {
   transform: translateY(-60%);
   z-index: 5;
   width: 100%;
-  margin: 0px;
+  margin: 0;
 }
 .system_logo {
   width:100%;
   max-width:200px;
   height:200px;
-  margin:0px auto;
+  margin:0 auto;
   -webkit-transform-origin: center center;
   transform-origin: center center;
   -webkit-animation: drawer-scale 750ms cubic-bezier(.1, .82, .25, 1);
@@ -178,14 +167,14 @@ body {
 .login_form {
   width:100%;
   max-width:350px;
-  margin:0px auto;
+  margin:0 auto;
   padding-top:30px;
   -webkit-animation: well-animation1 1s cubic-bezier(.1, .82, .25, 1);
   animation: well-animation1 1s cubic-bezier(.1, .82, .25, 1);
 }
 .login_form_item {
   width:100%;
-  padding:10px 0px;
+  padding:10px 0;
   display:inline-block;
 }
 .forgot_pass {
@@ -206,7 +195,6 @@ body {
   border-radius:30px;
   -webkit-border-radius:30px;
   -moz-border-radius:30px;
-  -o-border-radius:30px;
   padding:10px;
   color:#444444;
   width:100%;
@@ -245,7 +233,7 @@ body {
   height: 39px;
   position: absolute;
   top: 10px;
-  left: 0px;
+  left: 0;
   border-right: 2px solid #C0CAD6;
   z-index: 1;
   transition: all .5s ease;
@@ -258,8 +246,8 @@ body {
   width: 40px;
   height: 39px;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   border-right: 2px solid #C0CAD6;
   z-index: 1;
   transition: all .5s ease;
@@ -332,8 +320,8 @@ body {
 }
 .login_register_button {
   position:absolute;
-  top:0px;
-  left:0px;
+  top:0;
+  left:0;
   padding:10px 20px;
   width:100%;
 }
@@ -402,7 +390,6 @@ label {
   border: 2px solid #5b93fc;
 }
 [type="radio"]:not(:checked)+span:after {
-  -webkit-transform: scale(0);
   transform: scale(0);
 }
 [type="radio"]:not(:checked)+span:before, [type="radio"]:not(:checked)+span:after {
@@ -441,7 +428,6 @@ label {
   transition: .28s ease;
 }
 [type="radio"]:checked+span:after {
-  -webkit-transform: scale(1.02);
   transform: scale(1.02);
 }
 /*Animations*/
@@ -466,11 +452,9 @@ label {
 @-webkit-keyframes drawer-scale {
   0%,
   20% {
-    -webkit-transform: scale(0, 0);
     transform: scale(0, 0)
   }
   100% {
-    -webkit-transform: scale 1, 1;
     transform: scale(1.1)
   }
 }
@@ -478,23 +462,19 @@ label {
 @keyframes drawer-scale {
   0%,
   20% {
-    -webkit-transform: scale(0, 0);
     transform: scale(0, 0)
   }
   100% {
-    -webkit-transform: scale 1, 1;
     transform: scale(1.1)
   }
 }
 @keyframes well-animation1 {
   0%,
   25% {
-    -webkit-transform: translateY(-50px);
     transform: translateY(-50px);
     opacity: 0
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1
   }
@@ -502,12 +482,10 @@ label {
 @-webkit-keyframes well-animation2 {
   0%,
   25% {
-    -webkit-transform: translateX(-50px);
     transform: translateX(-50px);
     opacity: 0
   }
   100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1
   }
@@ -516,55 +494,53 @@ label {
 @keyframes well-animation2 {
   0%,
   25% {
-    -webkit-transform: translateX(-50px);
     transform: translateX(-50px);
     opacity: 0
   }
   100% {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1
   }
 }
 
 @-webkit-keyframes lgbg {
-  0%{background-position:0% 50%}
+  0%{background-position:0 50%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  100%{background-position:0 50%}
 }
 @-moz-keyframes lgbg {
-  0%{background-position:0% 50%}
+  0%{background-position:0 50%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  100%{background-position:0 50%}
 }
 @-o-keyframes lgbg {
-  0%{background-position:0% 50%}
+  0%{background-position:0 50%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  100%{background-position:0 50%}
 }
 @keyframes lgbg {
-  0%{background-position:0% 50%}
+  0%{background-position:0 50%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  100%{background-position:0 50%}
 }
 
 @-webkit-keyframes rgbg {
-  0%{background-position:0% 42%}
+  0%{background-position:0 42%}
   50%{background-position:100% 59%}
-  100%{background-position:0% 42%}
+  100%{background-position:0 42%}
 }
 @-moz-keyframes rgbg {
-  0%{background-position:0% 42%}
+  0%{background-position:0 42%}
   50%{background-position:100% 59%}
-  100%{background-position:0% 42%}
+  100%{background-position:0 42%}
 }
 @-o-keyframes rgbg {
-  0%{background-position:0% 42%}
+  0%{background-position:0 42%}
   50%{background-position:100% 59%}
-  100%{background-position:0% 42%}
+  100%{background-position:0 42%}
 }
 @keyframes rgbg {
-  0%{background-position:0% 42%}
+  0%{background-position:0 42%}
   50%{background-position:100% 59%}
-  100%{background-position:0% 42%}
+  100%{background-position:0 42%}
 }
