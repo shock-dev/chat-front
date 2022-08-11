@@ -134,6 +134,31 @@ img {
   float:left;
 }
 
+.follow {
+  background-image:url(../public/img/icons/follow.png);
+  background-repeat:no-repeat;
+  background-size:23px;
+  background-position:center center;
+}
+.giftSend {
+  background-image:url(../public/img/icons/gift.png);
+  background-repeat:no-repeat;
+  background-size:23px;
+  background-position:center center;
+}
+.messageSend {
+  background-image:url(../public/img/icons/chat.png);
+  background-repeat:no-repeat;
+  background-size:23px;
+  background-position:center center;
+}
+.otherMenu {
+  background-image:url(../public/img/icons/dotdotdot.png);
+  background-repeat:no-repeat;
+  background-size:23px;
+  background-position:center center;
+}
+
 .profile-right {
    height: 100%;
    transform: translateZ(0);
@@ -258,7 +283,7 @@ hr {
   right:0;
   width:30px;
   height:30px;
-  /*background-image:url(../public/icons/settings.png);*/
+  background-image:url(../public/img/icons/settings.png);
   background-repeat:no-repeat;
   background-position:center center;
   background-size:15px;
